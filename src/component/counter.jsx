@@ -11,7 +11,9 @@ function Counter(props) {
   };
   return (
     <>
-      <h1>Current State: {props.currentState}</h1>
+      <h1>
+        {props.description} : {props.currentState}
+      </h1>
       <button onClick={handleIncrease}>Increase</button>
       <button onClick={handleDeccrease}>Decrease</button>
     </>
@@ -19,7 +21,8 @@ function Counter(props) {
 }
 
 const mapStateToProps = (state) => ({
-  currentState: state.count
+  currentState: state.count,
+  description: "Current State"
 });
 
 const mapDispatchToProps = {
